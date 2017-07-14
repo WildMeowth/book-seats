@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+ <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.wildMeowth.bookSeats.dao.UserDao2">
+    <resultMap id="BaseResultMap" type="cn.wildMeowth.bookSeats.entity.User2">
+        <id column="bs_user_id" property="id" jdbcType="VARCHAR" />
+        <result column="bs_user_name" property="name" jdbcType="VARCHAR" />
+        <result column="bs_seat_id" property="seatId" jdbcType="VARCHAR" />
+        <result column="bs_seat_Time" property="seatTime" jdbcType="VARCHAR" />
+        <result column="bs_status" property="status" jdbcType="VARCHAR" />
+    </resultMap>
+    <!-- 查询用户记录总数 -->
+    <select id="selectCount" parameterType="String" resultType="int">
+        select count(*) from (select  a.bs_user_id,b.bs_user_name,a.bs_seat_id,a.bs_seat_time, a.bs_status from bs_userforseat as a, bs_user as b where a.bs_user_id=b.bs_user_id and b.bs_user_id=#{id}) as table1
+    </select>
+    <!-- 根据分页数据start 和size查询数据 -->
+    <select id="findByPage" parameterType="Map" resultMap="BaseResultMap">
+		select * from (select  a.bs_user_id,b.bs_user_name,a.bs_seat_id,a.bs_seat_time, a.bs_status from bs_userforseat as a, bs_user as b where a.bs_user_id=b.bs_user_id and b.bs_user_id=#{id}) as table1
+        <if test="start!=null and size!=null">
+        limit #{start},#{size}
+        </if>
+    </select>
+    
+    <select id="selectCountAll" resultType="int">
+        select count(*) from (select  a.bs_user_id,b.bs_user_name,a.bs_seat_id,a.bs_seat_time, a.bs_status from bs_userforseat as a, bs_user as b where a.bs_user_id=b.bs_user_id) as table1
+    </select>
+    <!-- 根据分页数据start 和size查询数据 -->
+    <select id="findByPageAll" parameterType="Map" resultMap="BaseResultMap">
+		select * from (select  a.bs_user_id,b.bs_user_name,a.bs_seat_id,a.bs_seat_time, a.bs_status from bs_userforseat as a, bs_user as b where a.bs_user_id=b.bs_user_id) as table1
+        <if test="start!=null and size!=null">
+        limit #{start},#{size}
+        </if>
+    </select>
+</mapper>

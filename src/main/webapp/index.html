@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="styles/index.css"/>
+
+
+
+</head>
+<body>
+	<div>
+		<!-- 导航 -->
+		<div class="nav">
+			
+		</div>
+		<div class="lunb" onmouseover="stop();" onmouseout="lunbo();" id="lunb22">
+			<a href="#"><img src="images/banner.jpg"/></a>
+			<a href="#"><img src="images/banner03.jpg" class="hide"/></a>
+		</div>
+		<div class="menu">
+			<div><a href="#"><img src="images/IMG1.png"/></a></div>
+			<div><a href="#"><img src="images/IMG2.jpg"/></a></div>
+			<div><a href="#"><img src="images/IMG3.jpg"/></a></div>
+			<div><a href="#"><img src="images/IMG4.jpg"/></a></div>
+		</div>
+		<div class="server">
+			<div>
+				<ul>
+					<li>了解</li>
+					<li><a href="#">座位管理系统</a></li>
+					<li><a href="#">预定</a></li>
+					<li><a href="#">退订</a></li>
+					<li><a href="#">账户管理</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li>图书馆资讯</li>
+					<li><a href="#">讲座和学习</a></li>
+					<li><a href="#">青少年活动</a></li>
+					<li><a href="#">活动</a></li>
+					<li><a href="#">图书借阅</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li>帐户</li>
+					<li><a href="#">管理你的 账户</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li>价值观</li>
+					<li><a href="#">辅助功能</a></li>
+					<li><a href="#">环境责任</a></li>
+					<li><a href="#">隐私</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li>关于图书馆</li>
+					<li><a href="#">资讯</a></li>
+					<li><a href="#">媒体资讯</a></li>
+					<li><a href="#">活动</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copy">
+			<p id="copyp1">Copyright © 2016 WildMeowth Inc. 保留所有权利。</p>
+			<p id="copyp2">
+				<a href="#">隐私政策&nbsp;|</a>
+				<a href="#">&nbsp;使用条款&nbsp;|</a>
+				<a href="#">&nbsp;销售政策&nbsp;|</a>
+				<a href="#">&nbsp;法律信息&nbsp;|</a>
+				<a href="#">&nbsp;网站地图&nbsp;|</a>
+			</p>
+			<p id="copyp3">京公安网安备 XXXXXXXXXXXXXX 京ICP备XXXXXXXX</p>
+		</div>
+	</div>	
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/cookie_util.js"></script>
+	<script>
+          $(".nav").load("./menu.html");
+    </script>
+	<script type="text/javascript" src="scripts/index.js"></script>
+	<script type="text/javascript">
+		window.onlode = function(){
+			lunbo();
+		}
+		var id;
+		var n = 0; //轮播次数
+		function lunbo(){
+			//启动定时器
+			id = setInterval(function(){
+				n++;
+				//获取所有图片
+				var imgs = document.getElementById("lunb22").getElementsByTagName("img");
+				//将所有的图片隐藏
+				for(var i=0;i<imgs.length;i++){
+					imgs[i].className = "hide";
+				}
+				//将下一张图片显示
+				var index = n%imgs.length;
+				imgs[index].className="show";
+			},2500);
+		}
+		//停止
+		function stop(){
+			clearInterval(id);
+		}
+		//弹出注册页面
+		/*function tanchu(){
+			var div = document.getElementById("iframe");
+			var div1 = document.getElementById("hidden0");
+			div.style.display="block";
+			div1.style.display="block"; 
+			$("#iframe").removeClass("hidden");
+			$("#hidden0").removeClass("hidden");
+		} 
+		//关闭页面
+		function close(){
+			var div = document.getElementById("iframe");
+			var div1 = document.getElementById("hidden0");
+			div.style.display="none";
+			div1.style.display="none"; 
+			$("#iframe").addClass("hidden");
+			$("#hidden0").addClass("hidden");
+		}*/
+		//弹出注册页面
+		/* l8.onclick=function(){
+			iframe.style.display="block";
+			hidden0.style.display="block";
+		}
+		//弹出登录页面
+		l9.onclick=function(){
+			iframe.style.display="block";
+			hidden0.style.display="block";
+		}
+		//隐藏注册或登录页面
+		hidden0.onclick=function(){
+			 iframe.style.display="none";
+			 hidden0.style.display="none";
+		} */
+	</script>
+</body>
+</html>

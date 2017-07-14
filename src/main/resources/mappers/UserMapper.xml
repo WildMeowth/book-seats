@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+ <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.wildMeowth.bookSeats.dao.UserDao">
+	<select id="findUserById" parameterType="string" resultType="cn.wildMeowth.bookSeats.entity.User">
+	    select bs_user_id as id,bs_user_name as name,bs_user_password as password,bs_user_token as token
+	    from bs_user where bs_user_id=#{id};
+	</select>
+	<update id="updatePwd" parameterType="cn.wildMeowth.bookSeats.entity.User">
+	     UPDATE bs_user SET bs_user_password=#{password}
+	     where bs_user_id=#{id};
+	</update>
+	<insert id="saveUser" parameterType="cn.wildMeowth.bookSeats.entity.UserIfo">
+		insert into bs_user(bs_user_id,bs_user_name,bs_user_password,bs_user_token)
+		values(#{id},#{name},#{password},#{token});
+	</insert>
+</mapper>
