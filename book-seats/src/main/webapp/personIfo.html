@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>userSeatList</title>
+<link rel="stylesheet" href="styles/index.css"/>
+<link rel="stylesheet" href="styles/personIfo.css"/>
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/cookie_util.js"></script>
+<script type="text/javascript" src="scripts/index.js"></script>
+<script type="text/javascript" src="scripts/updatePwd.js"></script>
+</head>
+<body class="body">
+    <div class="nav"></div>
+    <div class="container">
+	    <div class="div-person-ifo-top">
+	     &nbsp;修改密码
+	    </div>
+	    <div class="div-person-ifo-container">
+	    	<div class="div-person-notify"></div>
+	    	<div class="div-person-input" id="old-pwd">原密码&nbsp;&nbsp;&nbsp;<input id="pwd1" type="password"/><div id="password_msg" class="error"></div></div>
+	    	<div class="div-person-input">新密码&nbsp;&nbsp;&nbsp;<input id="new_password" type="password"/><div id="password_msg2" class="error"></div></div>
+	    	<div class="div-person-input">确认密码&nbsp;<input id="final_password" type="password"/><div id="password_msg3" class="error"></div></div>
+			<div class="div-person-btn"><button id="btn1" type="button">提交</button></div>
+	    </div>
+    </div>
+    <script>
+          $(".nav").load("./menu.html");
+    </script>
+</body>
+</html>

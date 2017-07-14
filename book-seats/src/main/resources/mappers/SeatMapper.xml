@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+ <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.wildMeowth.bookSeats.dao.SeatDao">
+	<select id="findSeatByUserIdforNo" parameterType="string" resultType="map">
+	    select bs_seat_id as id,bs_user_id as userId,bs_seat_time as time,bs_status as status
+	    from bs_userforseat where bs_user_id=#{userId} and bs_status="未履约";
+	</select>
+	<select id="findSeatByUserId" parameterType="string" resultType="map">
+	    select bs_seat_id as id,bs_user_id as userId,bs_seat_time as time,bs_status as status
+	    from bs_userforseat where bs_user_id=#{userId};
+	</select>
+	
+	<select id="findSeatByTime" parameterType="string" resultType="map">
+	    select bs_seat_id as id,bs_user_id as userId,bs_seat_time as time, bs_status as status
+	    from bs_userforseat where bs_seat_time=#{time};
+	</select>
+	
+	<insert id="addSeat" parameterType="cn.wildMeowth.bookSeats.entity.Seat">
+		insert into bs_userforseat
+			(bs_seat_id,
+			bs_user_id,
+			bs_seat_time,
+			bs_status
+			)
+		values
+			(#{id},#{userId},#{time},#{status});
+	</insert>
+	<delete id="deleteSeat" parameterType="cn.wildMeowth.bookSeats.entity.Seat">
+		delete from bs_userforseat
+		where bs_seat_id = #{id} and bs_user_id = #{userId} and bs_seat_time = #{time}
+	</delete>
+	<update id="updateStatus" parameterType="cn.wildMeowth.bookSeats.entity.Seat">
+		 UPDATE bs_userforseat SET bs_status="已履约"
+		where bs_seat_id = #{id} and bs_user_id = #{userId} and bs_seat_time = #{time} and bs_status= "未履约"
+	</update>
+	<select id="findSeatByUserIdAndTime"  resultType="map">
+	    select bs_seat_id as id,bs_user_id as userId,bs_seat_time as time,bs_status as status
+	    from bs_userforseat where bs_user_id=#{0} and bs_seat_time=#{1};
+	</select>
+</mapper>

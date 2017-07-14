@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在线选座订座</title>
+<meta name="keywords" content="jQuery,选座">
+<link rel="stylesheet" href="styles/index.css"/>
+<link rel="stylesheet" href="styles/edit.css"/>
+
+</head>
+
+<body>
+<div class="nav"></div>
+
+<div id="main">
+   <div class="top_title"><a>座位预定</a></div>
+   <div class="demo">
+   		<div id="seat-map">
+			<div class="front">前</div>					
+		</div>
+		<div class="booking-details">
+			<p>预定时间：</p>
+			<table>  
+        		<tr>
+            		<td>
+            			<select id="birth_year" onchange="setDays(this,birth_month,birth_day);loadSeatsAction();loadSeatsForUserIdAndTimeAction()">  
+                    		<option value="">年</option>  
+            			</select> 
+            			<select id="birth_month" onchange="setDays(birth_year,this,birth_day);loadSeatsAction();loadSeatsForUserIdAndTimeAction()">  
+                    		<option value="">月</option>  
+                    	</select> <select id="birth_day" onchange="loadSeatsAction();loadSeatsForUserIdAndTimeAction()">  
+                    		<option value="">日</option>  
+                        </select>
+                    </td>  
+        		</tr> 
+        		<tr>
+        			<td>
+                        <select id="time-hour" onchange="loadSeatsAction();loadSeatsForUserIdAndTimeAction()">
+                        	<option value="0">时间</option>
+							<option value="08">08:00</option>
+							<option value="10">10:00</option>
+							<option value="12">12:00</option>
+							<option value="14">14:00</option>				
+							<option value="16">16:00</option>
+							<option value="18">18:00</option>
+							<option value="20">20:00</option>
+						</select>
+						<span id="time-"></span>
+						<select id="time-until">   	
+							<option value="2">+2h</option>
+						</select>
+        			</td>
+        		</tr> 
+          </table>  
+			<p>座位：</p>
+			<ul id="selected-seats"></ul>
+					
+			<button class="checkout-button" onclick="addSeatAction();">确定</button>
+			<div id="seat-qingkuang" >
+			</div>
+					
+			<div id="legend"></div>
+		</div>
+		<div style="clear:both"></div>
+   </div>
+	
+  <br/>
+</div>
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.seat-charts.min.js"></script>
+<script type="text/javascript" src="scripts/cookie_util.js"></script>
+<script type="text/javascript" src="scripts/party.js" ></script>  
+<script type="text/javascript" src="scripts/edit_seat.js" ></script>
+<script>
+    $(".nav").load("./menu.html");
+</script>
+<script type="text/javascript" src="scripts/index.js"></script>
+
+<script>
+
+</script>
+
+
+<div id="footer">
+    <p><a></a></p>
+</div>
+</body>
+</html>

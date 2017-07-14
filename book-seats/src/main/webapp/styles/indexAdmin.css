@@ -1,0 +1,227 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style-type: none;
+}
+.nav{
+	height: 55px;
+	background: #448fb9;
+}
+.nav-ifo{
+    width: 980px;
+    height: 55px;
+    margin: 0 auto;
+    line-height: 55px;
+}
+.logo{
+    float: left;
+    font-family: "黑体";
+    font-size: 20px;
+    color: #fff;
+    width:175px;
+    text-align: center;
+}
+.admin{
+    float: right;
+    font-family: "黑体";
+    font-size: 14px;
+    color: #fff;
+}
+.admin-quit{
+    float: right;
+    font-family: "黑体";
+    font-size: 14px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.admin-quit:hover{
+    color:#000;
+}
+.container{
+    width: 980px;
+    height:460px;
+    margin:0 auto;
+}
+.admin-left{
+    margin-right:15px;
+    width: 175px;
+    height:455px;
+    float: left;
+    border: 2px #c2c2c2 solid;
+    background-color: #f2f2f2;
+}
+.admin-left>div{
+    height:46px;
+    line-height: 46px;
+    border-bottom: 2px #ddd solid;
+    background-color: #fff;
+    font-family: "黑体";
+    font-size: 14px;
+    color: #2d7ba9;
+    text-align: center;
+}
+.admin-right{
+    height:459px;
+    width:785px;
+    float: left;
+}
+.admin-right-top{
+    border-bottom:2px #8bd4ff solid;
+    height:25px;
+}
+.search{
+    float: right;
+    width:174px;
+    height:20px;
+}
+input{
+    width:169px;
+    height:19px;
+    border:1px #c2c2c2 solid;
+}
+.div-table-height{
+	height:365px;
+}
+.Utable{
+    width:100%;
+    font-family: "黑体";
+}
+.Utable td{
+    width:17.3%;
+}
+.Uthead{
+    width:100%;
+    height:33px;
+    border-bottom: 1px #ddd solid;
+}
+#Utbody{
+    width:100%;
+}
+#Utbody tr{
+    width:100%;
+    height:55px;
+}
+#Utbody tr:nth-of-type(odd){
+    background-color: #f2f2f2;
+}   
+#Utbody tr:nth-of-type(even){
+    background-color: #fff;
+}
+
+
+.navigation {
+    margin:0 auto;
+    width:250px;
+    height:30px;
+}
+
+.wp-paginate {
+    padding:0;
+    margin:0;
+}
+
+.wp-paginate li {
+    float:left;
+    list-style:none;
+    margin:2px;
+    padding:0;
+}
+
+.wp-paginate a {
+    margin:0 2px;
+    line-height:20px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    float:left;
+    min-height:20px;
+    min-width:20px;
+    color:#858585;
+    border:2px #e3e3e3 solid;
+    border-radius:13px;
+    font-size:11px;
+    cursor: pointer;
+}
+
+.wp-paginate a:hover {
+    border:2px #858585 solid;
+    color:#858585;
+
+}
+
+.wp-paginate .title {
+    color:#555;
+    margin:0;
+    margin-right:4px;
+    font-size:14px;
+}
+
+.wp-paginate .current {
+    margin:0 2px;
+    line-height:20px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    float:left;
+    font-weight:700;
+    min-height:20px;
+    min-width:20px;
+    color:#262626;
+    border:2px #119eda solid;
+    border-radius:13px;
+    font-size:11px;
+    color:#119eda;
+
+}
+
+.wp-paginate .page {
+    margin:0;
+    padding:0;
+}
+
+.wp-paginate .prev {
+}
+
+.wp-paginate .next {
+}
+.div-btn{
+    padding-left:40px;
+}
+button{
+    width: 45px;
+    height: 21px;
+    border: 0px;
+    border-radius: 1px;
+    background-color:#a9e0fe;
+    color: #54a0c8;
+    font-family: "黑体";
+    font-size: 14pxpx;
+    cursor: pointer;
+}
+button:active{
+	margin-left:1px;
+}
+.bgchange{
+	background: -webkit-linear-gradient(right bottom, rgb(38, 199, 99), rgb(0, 138, 255)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right bottom, rgb(38, 199, 99), rgb(0, 138, 255)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right bottom, rgb(38, 199, 99), rgb(0, 138, 255)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right top, rgb(0, 138, 255), rgb(38, 199, 99));
+	color:#fff !important;
+}
+
+.new-user {
+    font-family: "黑体";
+    font-size: 16px;
+    height:60px;
+    padding-top:60px;
+    margin:0 auto;
+}
+.new-user>div {
+    margin:0 auto;
+    width:66px;
+}

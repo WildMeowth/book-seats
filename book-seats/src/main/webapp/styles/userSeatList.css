@@ -1,0 +1,132 @@
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.top_title{
+	width:980px;
+	margin:0 auto;
+	font-family: "ºÚÌå";
+    height: 40px;
+    line-height: 40px;
+    border-bottom:1px dotted #adadad;
+}
+.container{
+    width:980px;
+    margin:0 auto;
+}
+tr{
+    height:40px;
+}
+th tr{
+	height:30px;
+}
+.seat-list-table td{
+    border: 1px #daf3ff solid;
+}
+.seat-list-table td:hover{
+    border: 1px #aed8ff solid;
+}
+.seat-list-table th {
+	border: 0px;
+    text-align: left;
+}
+.seat-list-thead{
+    background-color:#f1f1f1;
+}
+
+.seat-list-table{
+	border-collapse:separate;
+	border-spacing:0 2px;
+	width:100%;
+}
+.seat-list-id {
+	width: 150px;
+    border-right: 0px !important;
+}
+.seat-list-time {
+	width: 290px;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    text-align: center;
+}
+.seat-list-name {
+	width: 190px;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    text-align: center;
+}
+.seat-list-delete {
+	width: 240px;
+    border-left: 0px !important;
+    text-align: center;
+    cursor:pointer;
+}
+.div-table{
+	margin-top:10px;
+}
+#userSeatList tr:nth-of-type(odd){
+    background-color: #fff;
+}   
+#userSeatList tr:nth-of-type(even){
+    background-color: #f2f2f2;
+}
+
+
+.am-close {
+  display: inline-block;
+  text-align: center;
+  width: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.am-close:hover,
+.am-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
+  outline: none;
+}
+.am-close[class*="am-icon-"] {
+  font-size: 16px;
+}
+button.am-close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  /* Needed for Sarari */
+  border: 0;
+  -webkit-appearance: none;
+}
+a.am-close:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modifiers
+ ============================================================================ */
+.am-close-alt {
+  border-radius: 50%;
+  background: #eee;
+  opacity: 0.7;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  /* Hover */
+}
+.am-close-alt:hover,
+.am-close-alt:focus {
+  opacity: 1;
+}
+.am-close-spin:hover {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
