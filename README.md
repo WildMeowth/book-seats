@@ -9,7 +9,7 @@ test包存放测试类<br>
 utils包存放工具类<br>
 resource模块存放的是配置文件和数据库mapping文件<br>
 mappers文件夹数据库操作<br>
-*.xml：Spring上下文的配置文件
+*.xml：配置文件
 
 ## 遗留问题 
 
