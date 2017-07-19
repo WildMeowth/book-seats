@@ -7,7 +7,7 @@ service包存放业务逻辑<br>
 entity包映射数据库表的实体类<br>
 test包存放测试类<br>
 utils包存放工具类<br>
-resource模块存放的是配置文件和数据库mapping文件<br>
+resource模块存放的是配置文件和数据库mapping文件<br>ad
 mappers文件夹数据库操作<br>
 *.xml：配置文件
 
