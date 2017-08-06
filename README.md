@@ -9,7 +9,7 @@ test包存放测试类<br>
 utils包存放工具类<br>
 resource模块存放的是配置文件和数据库mapping文件<br>
 mappers文件夹数据库操作<br>
-*.xml：配置文件
+*.xml：配置文件<br>
 .sql：数据库操作语句
 
 ## 遗留问题 
