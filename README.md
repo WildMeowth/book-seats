@@ -1,4 +1,4 @@
-# book seat 项目
+﻿# book seat 项目
 
 本项目是一个maven项目，高校图书馆座位管理系统，毕设作品，本人的第一个项目，比较粗糙。
 
@@ -10,6 +10,7 @@ utils包存放工具类<br>
 resource模块存放的是配置文件和数据库mapping文件<br>
 mappers文件夹数据库操作<br>
 *.xml：配置文件
+.sql：数据库操作语句
 
 ## 遗留问题 
 
